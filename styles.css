@@ -1,0 +1,150 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: 'Arial', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-color: rgb(233, 241, 242);
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+     to {
+         opacity: 1;
+     }
+ }
+ 
+ @keyframes bounceIn {
+     0% {
+         transform: scale(0.5);
+         opacity: 0;
+     }
+     70% {
+         transform: scale(1.1);
+         opacity: 1;
+     }
+     100% {
+         transform: scale(1);
+     }
+ }
+ 
+ @keyframes slideUp {
+     from {
+         transform: translateY(50px);
+         opacity: 0;
+     }
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+ 
+ @keyframes rotate {
+     from {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+ }
+ 
+ .card-container {
+     background-color: rgb(15, 173, 231);
+     border-radius: 10px;
+     width: 450px;
+     text-align: center;
+     padding: 30px 20px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     position: relative;
+     animation: fadeIn 1.5s ease-in-out;
+ }
+ 
+ .logo-section {
+     margin-bottom: 20px;
+ }
+ 
+ .logo {
+     width: 100px;
+ }
+ 
+ .header h2 {
+     font-size: 1.5em;
+     color: #333;
+     margin-bottom: 0.2em;
+ }
+ 
+ .header h1 {
+     font-size: 2em;
+     color: #0033cc;
+     margin-bottom: 10px;
+ }
+ 
+ .header p {
+     color: #666;
+     font-size: 1em;
+     margin-bottom: 20px;
+ }
+ 
+ .image-section {
+     margin-bottom: 20px;
+ }
+ 
+ .profile-picture {
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 3px solid #0033cc;
+     animation: bounceIn 1.2s ease-in-out;
+     transition: transform 0.5s ease-in-out;
+ }
+ 
+ .profile-picture:hover {
+     transform: scale(1.1);
+ }
+ 
+ .info-section {
+     margin-bottom: 20px;
+ }
+ 
+ .name {
+     font-size: 1.5em;
+     color: #0033cc;
+     margin-bottom: 5px;
+     animation: slideUp 1s ease-in-out;
+ }
+ 
+ .designation {
+     font-size: 1em;
+     color: #666;
+     animation: slideUp 1s ease-in-out;
+ }
+ 
+ .footer-drones {
+     position: absolute;
+     bottom: 20px;
+     left: 0;
+     right: 0;
+     display: flex;
+     justify-content: space-between;
+     padding: 0 20px;
+ }
+ 
+ .drone-icon-left,
+ .drone-icon-right {
+     width: 50px;
+     animation: rotate 3s linear infinite;
+ }
+ 
+ .drone-icon-right {
+     transform: scaleX(-1);
+     /* Flip the right drone horizontally */
+ }
